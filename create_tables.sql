@@ -1,12 +1,10 @@
-/*necessário a unaccent*/
-
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
-CREATE EXTENSION unaccent
-
-CREATE DATABASE IF NOT EXISTS products_mangement;
+CREATE DATABASE products_mangement;
 
 \c products_mangement;
+
+CREATE EXTENSION  "uuid-ossp";
+
+CREATE EXTENSION unaccent;
 
 CREATE TABLE IF NOT EXISTS categories(
 	id BIGSERIAL PRIMARY KEY,
