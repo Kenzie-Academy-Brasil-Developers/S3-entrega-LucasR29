@@ -53,7 +53,6 @@ export const verifyCategoryExists = (type) => async (request, response, next) =>
             .then((res) => res.rows[0])
     }
 
-    console.log(category)
 
     if(category != undefined && type === "categoryCreation"){
         throw new AppError("category already created", 400)

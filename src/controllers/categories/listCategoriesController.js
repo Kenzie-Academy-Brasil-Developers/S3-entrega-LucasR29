@@ -2,7 +2,6 @@ import { listCategoriesService } from "../../services/categories/listCategories.
 
 export const listCategoriesController = async ( request, response) => {
     if(request.idCategory){
-        console.log('oi')
         const [status, data] = await listCategoriesService(request.idCategory)
 
         return response.status(status).json(data)

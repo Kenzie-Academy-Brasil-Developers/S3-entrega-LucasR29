@@ -3,7 +3,6 @@ import { AppError } from "../../errors.js"
 
 export const listCategoriesService = async (categoryID) => {
     if(categoryID){
-        console.log(categoryID)
         if(isNaN(categoryID)){
             throw new AppError("invalid category code", 404)
         }
@@ -13,8 +12,6 @@ export const listCategoriesService = async (categoryID) => {
         if(resp == undefined){
             throw new AppError("category doesn't exists",404)
         }
-
-        console.log(resp)
 
         return [200, resp]
     }
